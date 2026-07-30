@@ -1,0 +1,88 @@
+:root {
+  /* Paper */
+  --paper: #faf9f5;
+  --paper-line: rgba(38, 36, 31, 0.12);
+  --paper-line-strong: rgba(38, 36, 31, 0.26);
+  --line-control: rgba(38, 36, 31, 0.52);
+
+  /* Ink */
+  --ink-900: #26241f;
+  --ink-600: #5c584e;
+  --ink-500: #6e695d;
+  --ink-400: #908b7d;
+
+  /* Signature green */
+  --green-700: #24503f;
+  --green-600: #2d5d4b;
+  --green-tint: rgba(45, 93, 75, 0.08);
+
+  /* Kincha */
+  --kincha-600: #8a6224;
+  --kincha-500: #a97a2f;
+  --kincha-tint: rgba(169, 122, 47, 0.1);
+
+  /* Semantic */
+  --error-600: #a8402c;
+  --error-tint: rgba(168, 64, 44, 0.08);
+  --scrim: rgba(38, 36, 31, 0.32);
+
+  /* Type */
+  --font-serif: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, serif;
+  --font-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+  --text-display-size: clamp(56px, 12vw, 88px);
+  --text-display-line: 1.05;
+  --text-title-size: clamp(22px, 3vw, 28px);
+  --text-title-line: 1.4;
+  --text-heading-size: 20px;
+  --text-heading-line: 1.5;
+  --text-subhead-size: 16px;
+  --text-subhead-line: 1.6;
+  --text-body-size: 16px;
+  --text-body-line: 1.8;
+  --text-small-size: 14px;
+  --text-small-line: 1.6;
+  --text-margin-size: 13px;
+  --text-margin-line: 1.5;
+  --text-caption-size: 12px;
+  --text-caption-line: 1.4;
+  --text-display: 500 var(--text-display-size) / var(--text-display-line) var(--font-mono);
+  --text-title: 600 var(--text-title-size) / var(--text-title-line) var(--font-serif);
+  --text-heading: 600 var(--text-heading-size) / var(--text-heading-line) var(--font-serif);
+  --text-subhead: 600 var(--text-subhead-size) / var(--text-subhead-line) var(--font-sans);
+  --text-body: 400 var(--text-body-size) / var(--text-body-line) var(--font-sans);
+  --text-small: 400 var(--text-small-size) / var(--text-small-line) var(--font-sans);
+  --text-margin: 400 var(--text-margin-size) / var(--text-margin-line) var(--font-sans);
+  --text-caption: 400 var(--text-caption-size) / var(--text-caption-line) var(--font-sans);
+
+  /* Spacing and layout */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --content-max: 960px;
+  --column-main-max: 640px;
+  --page-pad-pc: 48px;
+  --page-pad-mobile: 20px;
+  --nav-width: 220px;
+
+  /* Shape */
+  --radius-box: 2px;
+  --border-hair: 1px solid var(--paper-line);
+  --border-box: 1px solid var(--paper-line-strong);
+  --border-control: 1px solid var(--line-control);
+  --shadow: none;
+  --focus-ring: 3px solid var(--green-600);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-stamp: cubic-bezier(0.34, 1.2, 0.4, 1);
+  --dur-hover: 100ms;
+  --dur-quiet: 200ms;
+  --dur-settle: 320ms;
+  --dur-stamp: 480ms;
+}

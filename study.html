@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学習を始める</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="stylesheet" href="./components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="side-nav" aria-label="目次">
+      <a class="brand" href="./index.html">きづき</a>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>じぶんの取説</a>
+          <a class="nav-link nav-sublink" href="./manual-proven.html">うまくいった方法</a>
+          <a class="nav-link nav-sublink" href="./manual-insights.html">気づき</a>
+        </li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+      <p class="account-label">表示名</p>
+    </nav>
+
+    <main class="page">
+      <div class="document-grid">
+        <div class="main-column">
+          <h1>学習を始める</h1>
+
+          <div class="section" style="margin-top: var(--space-5); display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4)">
+            <p style="margin: 0">いま「<span style="color:var(--ink-900)">音読してから解く</span>」を試しています　<a href="./manual.html">じぶんの取説</a></p>
+            <svg class="fumi fumi-s" viewBox="0 0 32 32" aria-hidden="true" style="flex: 0 0 auto"><path d="M6 19c0-6.5 4.5-11 10.5-11 4.5 0 8 3.2 8 7.5 0 5.5-4.5 9.5-10.5 9.5-1.6 0-3.2-.3-4.6-1"/><path d="M24.2 13.5l3.8-1.2-2.8 3"/><circle class="fumi-eye" cx="21.5" cy="13.5" r="1"/><path d="M6.5 20.5L2 24.5M7.5 23L3.5 27"/><path d="M13 25.5v3.5M17.5 25.8v3.2"/><path d="M12 14.5c2.5-1 5.5-1 8 .5"/></svg>
+          </div>
+
+          <form class="section" style="margin-top: var(--space-5)" action="./result.html" method="get">
+            <div>
+              <label class="field-label" id="goal-toggle-label">目標</label>
+              <div class="segments" role="radiogroup" aria-labelledby="goal-toggle-label">
+                <input class="segment-input" type="radio" id="goal-linked" name="goal_mode" value="linked" checked>
+                <label class="segment-label" for="goal-linked">TOEIC 800点を目指す</label>
+                <input class="segment-input" type="radio" id="goal-separate" name="goal_mode" value="separate">
+                <label class="segment-label" for="goal-separate">目標とは別</label>
+              </div>
+            </div>
+
+            <fieldset style="margin: var(--space-6) 0 0; padding: 0; border: 0;">
+              <legend class="field-label">時間を選ぶ</legend>
+              <p class="group-error" id="minutes-error" hidden>時間を選んでください</p>
+              <div class="segments" role="radiogroup" aria-label="学習時間" aria-describedby="minutes-error">
+                <input class="segment-input" type="radio" id="min-5" name="minutes" value="5">
+                <label class="segment-label" for="min-5"><span class="num">5</span>分</label>
+                <input class="segment-input" type="radio" id="min-15" name="minutes" value="15" checked>
+                <label class="segment-label" for="min-15"><span class="num">15</span>分</label>
+                <input class="segment-input" type="radio" id="min-25" name="minutes" value="25">
+                <label class="segment-label" for="min-25"><span class="num">25</span>分</label>
+                <input class="segment-input" type="radio" id="min-50" name="minutes" value="50">
+                <label class="segment-label" for="min-50"><span class="num">50</span>分</label>
+              </div>
+              <p class="caption" style="margin-top: var(--space-2)">前回は<span class="num">25</span>分でした。</p>
+            </fieldset>
+
+            <div style="margin-top: var(--space-6)">
+              <label class="field-label" for="topic-input">今回やること（必須）</label>
+              <input class="field-control" id="topic-input" name="topic" type="text" maxlength="100" placeholder="例: 英単語を10個復習" aria-describedby="topic-error">
+              <p class="group-error" id="topic-error" hidden>今回やることを入力してください</p>
+              <div style="margin-top: var(--space-2)">
+                <span class="caption">最近の入力:</span>
+                <button class="btn btn-text" type="button" data-topic="英単語を10個復習">英単語を10個復習</button>
+                <button class="btn btn-text" type="button" data-topic="リスニング問題">リスニング問題</button>
+                <button class="btn btn-text" type="button" data-topic="文法ドリル">文法ドリル</button>
+              </div>
+            </div>
+
+            <div class="button-row" style="margin-top: var(--space-7)">
+              <button class="btn btn-primary" type="submit">学習を開始する</button>
+              <button class="btn btn-text" type="button" id="demo-error-toggle">（デモ）エラー状態を表示</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <nav class="mobile-nav" aria-label="目次">
+      <ul class="mobile-nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>取説</a></li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    (() => {
+      const input = document.getElementById("topic-input");
+      document.querySelectorAll("[data-topic]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          input.value = btn.dataset.topic;
+          input.focus();
+        });
+      });
+    })();
+
+    // デモ専用: Rails実装では移植不要。create失敗時のTurbo Frame再描画で
+    // .group-error はサーバー側が最初から hidden なしでレンダリングする。
+    (() => {
+      const toggle = document.getElementById("demo-error-toggle");
+      const errors = [document.getElementById("minutes-error"), document.getElementById("topic-error")];
+      toggle.addEventListener("click", () => {
+        const show = errors[0].hidden;
+        errors.forEach((el) => { el.hidden = !show; });
+        if (show) errors[0].scrollIntoView({ block: "center" });
+      });
+    })();
+  </script>
+</body>
+</html>

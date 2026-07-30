@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>気づき</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="stylesheet" href="./components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="side-nav" aria-label="目次">
+      <a class="brand" href="./index.html">きづき</a>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>じぶんの取説</a>
+          <a class="nav-link nav-sublink" href="./manual-proven.html">うまくいった方法</a>
+          <a class="nav-link nav-sublink" href="./manual-insights.html" aria-current="page">気づき</a>
+        </li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+      <p class="account-label">表示名</p>
+    </nav>
+
+    <main class="page">
+      <div class="document-grid">
+        <div class="main-column">
+          <h1>気づき</h1>
+          <p class="caption" style="margin-top: var(--space-2)">ふみのメモから認めたものと、自分で書いた気づき。試して確かめるとうまくいった方法になります。</p>
+
+          <div class="ledger" style="margin-top: var(--space-5)">
+            <article class="ledger-row">
+              <div>
+                <p><strong>夜はSNSを先に閉じると始めやすい</strong></p>
+                <p class="caption">未分類</p>
+                <div class="row-actions">
+                  <button class="btn btn-text" type="button">これを試す</button>
+                  <button class="btn btn-text" type="button">編集</button>
+                  <button class="btn btn-text" type="button">削除</button>
+                </div>
+              </div>
+              <p class="ledger-meta"><time datetime="2026-07-02">7/2</time><br>自己筆記</p>
+            </article>
+          </div>
+
+          <details class="notnow" style="margin-top: var(--space-4)">
+            <summary>▸ 今は合わない（<span class="num">1</span>件）</summary>
+            <div class="ledger" style="margin-top: var(--space-2)">
+              <article class="ledger-row">
+                <div>
+                  <p><strong>金曜夜は<span class="num">5</span>分が限度</strong></p>
+                  <p class="caption">今は合わない ／ 集中の条件</p>
+                  <div class="row-actions">
+                    <button class="btn btn-text" type="button">もう一度試す</button>
+                    <button class="btn btn-text" type="button">編集</button>
+                    <button class="btn btn-text" type="button">削除</button>
+                  </div>
+                </div>
+                <p class="ledger-meta"><time datetime="2026-06-15">6/15</time><br><span class="num">6/16〜6/23</span> 試行</p>
+              </article>
+            </div>
+          </details>
+
+          <div class="button-row" style="margin-top: var(--space-6)">
+            <button class="btn btn-primary" type="button">気づきを書く</button>
+          </div>
+
+          <p style="margin-top: var(--space-6)"><a href="./manual.html">じぶんの取説へ戻る</a></p>
+        </div>
+      </div>
+    </main>
+
+    <nav class="mobile-nav" aria-label="目次">
+      <ul class="mobile-nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>取説</a></li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

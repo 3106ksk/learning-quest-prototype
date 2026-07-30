@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>アカウントを登録</title>
+    <link rel="icon" type="image/svg+xml" href="./icon.svg">
+    <link rel="icon" type="image/svg+xml" href="./icon.svg">
+    <link rel="stylesheet" href="./components.css">
+  </head>
+  <body>
+    <header class="public-header">
+      <a class="brand" href="./lp.html">きづき</a>
+      <nav class="public-actions" aria-label="公開メニュー">
+        <a class="btn btn-text" href="./login.html">ログイン</a>
+        <a class="btn btn-secondary" href="./signup.html" aria-current="page">無料で始める</a>
+      </nav>
+    </header>
+    <main class="public-page">
+      <div class="form-shell">
+        <h1>アカウントを登録</h1>
+        <form class="section form-stack" style="margin-top:var(--space-5)" action="./goal-new.html">
+          <div>
+            <label class="field-label" for="signup-email">メールアドレス</label>
+            <input class="field-control" id="signup-email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label class="field-label" for="signup-password">パスワード（8文字以上）</label>
+            <input
+              class="field-control"
+              id="signup-password"
+              type="password"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            >
+            <p class="caption form-help">8文字以上</p>
+          </div>
+          <div>
+            <label class="field-label" for="signup-confirm">パスワード（確認）</label>
+            <input
+              class="field-control"
+              id="signup-confirm"
+              type="password"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            >
+          </div>
+          <button class="btn btn-primary" type="submit">登録する</button>
+          <p class="form-divider">または</p>
+          <button class="btn btn-secondary" type="button">Googleで登録</button>
+          <p class="small">
+            <a href="#">利用規約</a>・<a href="#">プライバシーポリシー</a>に同意して登録します。
+          </p>
+          <p class="small">
+            すでにアカウントをお持ちの方は <a href="./login.html">ログイン</a>
+          </p>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

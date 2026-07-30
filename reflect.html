@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>振り返る</title>
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="stylesheet" href="./components.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="side-nav" aria-label="目次">
+      <a class="brand" href="./index.html">きづき</a>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>じぶんの取説</a>
+          <a class="nav-link nav-sublink" href="./manual-proven.html">うまくいった方法</a>
+          <a class="nav-link nav-sublink" href="./manual-insights.html">気づき</a>
+        </li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+      <p class="account-label">表示名</p>
+    </nav>
+
+    <main class="page">
+      <div class="document-grid">
+        <div class="main-column">
+          <h1>振り返る</h1>
+
+          <section class="section" style="margin-top: var(--space-5)" aria-labelledby="trial-name">
+            <p class="caption">試していること</p>
+            <h2 id="trial-name">音読してから問題を解く</h2>
+            <p class="margin-note"><span class="num">6/30〜7/6</span></p>
+          </section>
+
+          <section class="section" aria-labelledby="fumi-summary">
+            <p><svg class="fumi fumi-s" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 19c0-6.5 4.5-11 10.5-11 4.5 0 8 3.2 8 7.5 0 5.5-4.5 9.5-10.5 9.5-1.6 0-3.2-.3-4.6-1"/><path d="M24.2 13.5l3.8-1.2-2.8 3"/><circle class="fumi-eye" cx="21.5" cy="13.5" r="1"/><path d="M6.5 20.5L2 24.5M7.5 23L3.5 27"/><path d="M13 25.5v3.5M17.5 25.8v3.2"/><path d="M12 14.5c2.5-1 5.5-1 8 .5"/></svg></p>
+            <p id="fumi-summary" style="margin-top: var(--space-3)">「音読してから問題を解く」を試しはじめて、<span class="num">1</span>週間が経ちました。</p>
+            <p style="margin-top: var(--space-2)">試していたこの<span class="num">7</span>日間、<span class="num">4</span>回の学習があり、「試した」と答えた<span class="num">3</span>回のうち、集中の高い記録が<span class="num">2</span>回。試さなかった<span class="num">1</span>回では<span class="num">0</span>回でした。</p>
+            <p style="margin-top: var(--space-4)">どうでしたか？</p>
+            <div class="button-row" style="margin-top: var(--space-3)" aria-label="どうでしたか？">
+              <button class="btn btn-secondary" type="button" id="verdict-worked">うまくいった</button>
+              <button class="btn btn-secondary" type="button">合わなかった</button>
+              <button class="btn btn-secondary" type="button">もう少し続ける</button>
+            </div>
+          </section>
+
+          <section class="section" id="context-ask" hidden aria-labelledby="context-title">
+            <h2 id="context-title">うまくいった方法として記録しました。</h2>
+            <div style="margin-top: var(--space-4)">
+              <label class="field-label" for="context-input">どんなときに効きそう？（任意）</label>
+              <input class="field-control" id="context-input" type="text" maxlength="30" placeholder="例: 平日の朝">
+            </div>
+            <div class="button-row" style="margin-top: var(--space-4)">
+              <a class="btn btn-primary" href="./manual.html">保存する</a>
+              <a class="btn btn-text" href="./manual.html">あとで</a>
+            </div>
+          </section>
+
+          <p style="margin-top: var(--space-6)"><a href="./manual.html">じぶんの取説へ戻る</a></p>
+        </div>
+      </div>
+    </main>
+
+    <nav class="mobile-nav" aria-label="目次">
+      <ul class="mobile-nav-list">
+        <li><a class="nav-link" href="./home.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 11.5 12 4.5l7.5 7V20h-5v-5.5h-5V20h-5z"/></svg>ホーム</a></li>
+        <li><a class="nav-link" href="./history.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4.5"/></svg>履歴</a></li>
+        <li><a class="nav-link study" href="./study.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="6.5"/><path d="M12 13.5V9.5M12 7V4M9.5 4h5"/></svg>学習する</a></li>
+        <li><a class="nav-link" href="./manual.html" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 3.5h13v17h-13z"/><path d="M14 3.5V11l2-1.8 2 1.8V3.5"/></svg>取説</a></li>
+        <li><a class="nav-link" href="./settings.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M18 6l-1.8 1.8M7.8 16.2 6 18"/></svg>設定</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <script>
+    (() => {
+      const worked = document.getElementById("verdict-worked");
+      const contextAsk = document.getElementById("context-ask");
+      worked.addEventListener("click", () => {
+        contextAsk.hidden = false;
+        document.getElementById("context-input").focus();
+      });
+    })();
+  </script>
+</body>
+</html>
