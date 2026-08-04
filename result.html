@@ -3,93 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>学習完了</title>
+  <title>評価結果</title>
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="stylesheet" href="./components.css">
 </head>
 <body>
-  <main class="page stamp-reveal" id="result">
+  <main class="page">
     <div class="document-grid">
       <div class="main-column">
-        <header class="result-header">
-          <h1>学習完了</h1>
-          <p style="margin-top: var(--space-2)">英単語を10個復習 / <span class="num">15</span>分</p>
-          <p class="margin-note"><time datetime="2026-07-05T20:10">7/5 20:10</time><br>実際の学習時間 <span class="num">13</span>分</p>
+        <header>
+          <h1>英単語を10個復習</h1>
         </header>
 
-        <section class="section" aria-labelledby="rank-title" style="margin-top: var(--space-5)">
-          <h2 class="sr-only" id="rank-title">Rank B</h2>
-          <div class="stamp-stage">
-            <span class="stamp stamp-b" data-reveal="stamp" role="img" aria-label="Rank B">
-              <svg viewBox="0 0 96 96" role="img" aria-hidden="true">
-                <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="48" cy="48" r="42" fill="none" stroke="currentColor" stroke-width="0.75"/>
-                <text x="48" y="55" fill="currentColor" font-size="43" font-weight="600" text-anchor="middle">B</text>
-                <text class="stamp-rank-word" x="48" y="71" fill="currentColor" font-size="7" letter-spacing="1.4" text-anchor="middle">RANK</text>
-              </svg>
-            </span>
-          </div>
-        </section>
-
-        <div class="settle-item" data-reveal="summary">
-          <p>学習を開始できました。選んだ時間に集中して取り組めました。自分で決めた内容にしっかり取り組めました。</p>
+        <div class="stamp-stage section">
+          <span class="stamp stamp-b" role="img" aria-label="Rank B">
+            <svg viewBox="0 0 96 96" aria-hidden="true">
+              <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="48" cy="48" r="42" fill="none" stroke="currentColor" stroke-width="0.75"/>
+              <text x="48" y="55" fill="currentColor" font-size="43" font-weight="600" text-anchor="middle">B</text>
+              <text class="stamp-rank-word" x="48" y="71" fill="currentColor" font-size="7" letter-spacing="1.4" text-anchor="middle">RANK</text>
+            </svg>
+          </span>
         </div>
 
-        <section class="section settle-item" data-reveal="breakdown" aria-labelledby="effort-title">
-          <h2 class="section-title" id="effort-title">今回の努力の記録</h2>
-          <div class="effort-list">
-            <div class="effort-row">
-              <p class="effort-label">着手</p>
-              <p>学習を開始できた</p>
+        <section class="section" aria-labelledby="session-title">
+          <h2 class="section-title" id="session-title">今回の学習</h2>
+          <dl class="definition-list">
+            <div class="definition-row">
+              <dt>開始日時</dt>
+              <dd><time datetime="2026-07-05T20:10">7/5 20:10</time></dd>
             </div>
-            <div class="effort-row">
-              <p class="effort-label">集中</p>
-              <div><p>集中して取り組めた</p><p class="small">学習内容に向き合って進められた</p></div>
+            <div class="definition-row">
+              <dt>予定時間</dt>
+              <dd class="num">15分</dd>
             </div>
-            <div class="effort-row">
-              <p class="effort-label">チャレンジ</p>
-              <div><p>自分で決めた内容に取り組めた</p><p class="small">決めたことをひと通り進められた</p></div>
+            <div class="definition-row">
+              <dt>実時間</dt>
+              <dd class="num">13分</dd>
             </div>
-          </div>
-          <p class="small" style="margin-top: var(--space-4)">学習を開始したことに加え、今回記録された集中またはチャレンジの内容からRank Bになりました。</p>
-
-          <div class="box box-kincha" style="margin-top: var(--space-7)" aria-labelledby="result-reward-title">
-            <h3 class="box-label" id="result-reward-title">ご褒美まで</h3>
-            <div class="quantity" aria-describedby="result-reward-summary">
-              <span class="squares" aria-hidden="true"><span class="square reward-filled"></span><span class="square reward-filled"></span><span class="square reward-filled"></span><span class="square reward-filled"></span><span class="square reward-empty"></span></span>
-              <span class="quantity-count">あと1回で達成</span>
-            </div>
-            <p class="sr-only" id="result-reward-summary">B以上 4 / 5回　あと1回で達成</p>
-          </div>
+          </dl>
         </section>
 
-        <div class="button-row settle-item" data-reveal="cta" style="margin-top: var(--space-7)">
-          <a class="btn btn-primary" href="./home.html">ホームで今週の努力を見る</a>
+        <section class="section" aria-labelledby="effort-title">
+          <h2 class="section-title" id="effort-title">今回の努力の記録</h2>
+          <dl class="definition-list evaluation-breakdown">
+            <div class="definition-row">
+              <dt>着手</dt>
+              <dd>学習を開始できた</dd>
+            </div>
+            <div class="definition-row">
+              <dt>集中</dt>
+              <dd>
+                <p><strong>集中して取り組めた</strong></p>
+                <p class="small">学習内容に向き合って進められた</p>
+              </dd>
+            </div>
+            <div class="definition-row">
+              <dt>チャレンジ</dt>
+              <dd>
+                <p><strong>自分で決めた内容に取り組めた</strong></p>
+                <p class="small">決めたことをひと通り進められた</p>
+              </dd>
+            </div>
+          </dl>
+          <p class="small" style="margin-top: var(--space-4)">学習を開始したことに加え、今回記録された集中またはチャレンジの内容からRank Bになりました。</p>
+        </section>
+
+        <div class="button-row" style="margin-top: var(--space-7)">
+          <a class="btn btn-primary" href="./history.html">学習の記録を見る</a>
           <a class="btn btn-secondary" href="./study.html">もう一度学習する</a>
         </div>
-        <p class="settle-item is-visible" style="margin-top: var(--space-4)"><a href="./manual.html">振り返りを書く</a></p>
       </div>
     </div>
   </main>
-
-  <script>
-    (() => {
-      const root = document.getElementById("result");
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const REVEALED_KEY = "manabi-result-revealed";
-      const reveal = (name) => root.querySelector(`[data-reveal="${name}"]`).classList.add("is-visible");
-
-      if (reducedMotion || sessionStorage.getItem(REVEALED_KEY)) {
-        root.classList.add("reveal-static");
-        return;
-      }
-      sessionStorage.setItem(REVEALED_KEY, "1");
-
-      window.setTimeout(() => reveal("stamp"), 240);
-      window.setTimeout(() => reveal("summary"), 800);
-      window.setTimeout(() => reveal("breakdown"), 950);
-      window.setTimeout(() => reveal("cta"), 1100);
-    })();
-  </script>
 </body>
 </html>
