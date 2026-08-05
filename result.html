@@ -8,27 +8,27 @@
   <link rel="stylesheet" href="./components.css">
 </head>
 <body>
-  <main class="page">
+  <main class="page evaluation-result-page">
     <div class="document-grid">
       <div class="main-column">
-        <header>
+        <header class="evaluation-result-header">
           <h1>英単語を10個復習</h1>
         </header>
 
-        <div class="stamp-stage section">
-          <span class="stamp stamp-b" role="img" aria-label="Rank B">
-            <svg viewBox="0 0 96 96" aria-hidden="true">
-              <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="48" cy="48" r="42" fill="none" stroke="currentColor" stroke-width="0.75"/>
-              <text x="48" y="55" fill="currentColor" font-size="43" font-weight="600" text-anchor="middle">B</text>
-              <text class="stamp-rank-word" x="48" y="71" fill="currentColor" font-size="7" letter-spacing="1.4" text-anchor="middle">RANK</text>
+        <div class="stamp-stage">
+          <span class="stamp stamp-b stamp-l" role="img" aria-label="Rank B">
+            <svg viewBox="0 0 96 96" fill="currentColor" aria-hidden="true" focusable="false">
+              <circle class="stamp-ring" cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle class="stamp-ring-inner" cx="48" cy="48" r="42" fill="none" stroke="currentColor" stroke-width="0.75"/>
+              <text class="stamp-rank-letter" x="48" y="55" font-size="43" font-weight="600" text-anchor="middle">B</text>
+              <text class="stamp-rank-word" x="48" y="71" font-size="7" letter-spacing="1.4" text-anchor="middle">RANK</text>
             </svg>
           </span>
         </div>
 
-        <section class="section" aria-labelledby="session-title">
-          <h2 class="section-title" id="session-title">今回の学習</h2>
-          <dl class="definition-list">
+        <section class="evaluation-result-section evaluation-session" aria-labelledby="session-title">
+          <h2 id="session-title" class="evaluation-result-section-title">今回の学習</h2>
+          <dl class="definition-list evaluation-result-list evaluation-session-list">
             <div class="definition-row">
               <dt>開始日時</dt>
               <dd><time datetime="2026-07-05T20:10">7/5 20:10</time></dd>
@@ -44,9 +44,9 @@
           </dl>
         </section>
 
-        <section class="section" aria-labelledby="effort-title">
-          <h2 class="section-title" id="effort-title">今回の努力の記録</h2>
-          <dl class="definition-list evaluation-breakdown">
+        <section class="evaluation-result-section" aria-labelledby="effort-title">
+          <h2 id="effort-title" class="evaluation-result-section-title">今回の努力の記録</h2>
+          <dl class="definition-list evaluation-result-list evaluation-breakdown">
             <div class="definition-row">
               <dt>着手</dt>
               <dd>学習を開始できた</dd>
@@ -66,10 +66,10 @@
               </dd>
             </div>
           </dl>
-          <p class="small" style="margin-top: var(--space-4)">学習を開始したことに加え、今回記録された集中またはチャレンジの内容からRank Bになりました。</p>
+          <p class="small evaluation-result-reason">学習を開始したことに加え、今回記録された集中またはチャレンジの内容からRank Bになりました。</p>
         </section>
 
-        <div class="button-row" style="margin-top: var(--space-7)">
+        <div class="button-row evaluation-result-actions">
           <a class="btn btn-primary" href="./history.html">学習の記録を見る</a>
           <a class="btn btn-secondary" href="./study.html">もう一度学習する</a>
         </div>

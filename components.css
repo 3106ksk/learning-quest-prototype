@@ -460,6 +460,12 @@ time,
   padding-block: var(--space-4);
 }
 
+/* <br>をやめて.ledger-body/.ledger-metaの子要素をブロック化する（読み上げ名の構造をマークアップに依存させない） */
+.ledger-body > *,
+.ledger-meta > * {
+  display: block;
+}
+
 .ledger-meta {
   color: var(--ink-500);
   font-size: var(--text-margin-size);
@@ -472,6 +478,15 @@ time,
   height: 96px;
   color: var(--green-600);
   transform-origin: center;
+}
+
+/* 2026-08-04改訂: STUDY-04結果画面で実見の上、Lサイズを96px→120pxへ変更
+   （visual-design-spec.md §3.5は96pxのまま。正典改訂リストに追加済み）。
+   .stampの基本サイズ（96px）はlp.htmlのプレビュー用途と共有しているため、
+   ここでは上書きせず専用の修飾クラスで対応する。 */
+.stamp-l {
+  width: 120px;
+  height: 120px;
 }
 
 .stamp svg {
@@ -514,6 +529,21 @@ time,
 .stamp-a.stamp-s,
 .stamp-a.stamp-m {
   color: var(--kincha-600);
+}
+
+/* viewBox比でRANK文字がM(2.9px)/S(1.46px)まで縮み判読不能になるため非表示にする */
+.stamp-s .stamp-rank-word,
+.stamp-m .stamp-rank-word {
+  display: none;
+}
+
+/* S(20px)では二重輪郭の間隔が0.4px未満になり物理的に成立しないため単線化する */
+.stamp-s .stamp-ring-inner {
+  display: none;
+}
+
+.stamp-s .stamp-ring {
+  stroke-width: 5;
 }
 
 .success-mark {
@@ -593,9 +623,14 @@ time,
 .stamp-stage {
   display: flex;
   justify-content: center;
-  min-height: 120px;
+  min-height: 144px;
   align-items: center;
   margin-block: var(--space-5);
+}
+
+/* HISTORY-02: M印(40px)に対して.stamp-stageの144pxは過大なため専用の高さを設ける */
+.stamp-stage-m {
+  min-height: 64px;
 }
 
 @keyframes stamp-in {
@@ -620,14 +655,95 @@ time,
   }
 }
 
+.evaluation-result-header {
+  border-bottom: var(--border-hair);
+  padding-bottom: var(--space-4);
+  text-align: center;
+}
+
+/* 2026-08-04改訂: 区切りの第一手段は罫線と余白が原則（visual-design-spec.md §3.2）
+   だが、STUDY-04結果画面のセクション区切りは実装側の判断で囲み枠（--border-box）
+   を採用した。正典改訂リストに追加済み（「囲み枠の特権」対象へ本画面を追加）。 */
+.evaluation-result-section {
+  position: relative;
+  border: var(--border-box);
+  border-radius: var(--radius-box);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+}
+
+.evaluation-result-section + .evaluation-result-section {
+  margin-top: var(--space-7);
+}
+
+.evaluation-result-section-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  background: var(--paper);
+  padding-inline: var(--space-3);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.evaluation-result-list {
+  border: 0;
+}
+
+.evaluation-result-list .definition-row {
+  border-bottom: var(--border-hair);
+}
+
+.evaluation-session {
+  margin-top: var(--space-7);
+}
+
+.evaluation-session-list .definition-row {
+  grid-template-columns: 112px minmax(0, 160px);
+  justify-content: center;
+  gap: var(--space-3);
+  padding-block: var(--space-2);
+}
+
+.evaluation-session-list dd {
+  text-align: center;
+}
+
 .evaluation-breakdown .definition-row {
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 320px);
+  justify-content: center;
   gap: var(--space-3);
   line-height: 1.8;
 }
 
 .evaluation-breakdown dt {
   letter-spacing: 0.04em;
+}
+
+.evaluation-result-reason {
+  margin-top: var(--space-4);
+}
+
+.evaluation-result-actions {
+  justify-content: center;
+  margin-top: var(--space-9);
+}
+
+@media (min-width: 768px) {
+  .evaluation-result-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .evaluation-session-list .definition-row,
+  .evaluation-breakdown .definition-row {
+    grid-template-columns: 88px minmax(0, 1fr);
+    justify-content: stretch;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1013,6 +1129,11 @@ a.ledger-row:hover { background: var(--green-tint); }
   color: var(--green-600);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* 記号はマークアップから外しCSSで描く（読み上げ時に「右向き山括弧」等と読まれるのを避ける） */
+.detail-cue::after {
+  content: " ›";
 }
 
 
